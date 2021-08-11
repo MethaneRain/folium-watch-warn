@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5088c2f139474aee8f4237e845eddbf1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_5088c2f139474aee8f4237e845eddbf1" ></div>
+        
+</body>
+<script>    
+    
+            var map_5088c2f139474aee8f4237e845eddbf1 = L.map(
+                "map_5088c2f139474aee8f4237e845eddbf1",
+                {
+                    center: [42.0, -95.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2a45c13bfb40492d91c682e1d6d9f003 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5088c2f139474aee8f4237e845eddbf1);
+        
+    
+            var feature_group_571ce80d46be48dc8dcec508237be766 = L.featureGroup(
+                {}
+            ).addTo(map_5088c2f139474aee8f4237e845eddbf1);
+        
+    
+        function geo_json_2df24f460d354e0da086227c4cc421e6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#000000", "fillColor": "#ff0000", "fillOpacity": 0.65, "opacity": 1.0, "weight": 1.0};
+            }
+        }
+
+        function geo_json_2df24f460d354e0da086227c4cc421e6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2df24f460d354e0da086227c4cc421e6 = L.geoJson(null, {
+                onEachFeature: geo_json_2df24f460d354e0da086227c4cc421e6_onEachFeature,
+            
+                style: geo_json_2df24f460d354e0da086227c4cc421e6_styler,
+        });
+
+        function geo_json_2df24f460d354e0da086227c4cc421e6_add (data) {
+            geo_json_2df24f460d354e0da086227c4cc421e6
+                .addData(data)
+                .addTo(feature_group_571ce80d46be48dc8dcec508237be766);
+        }
+            geo_json_2df24f460d354e0da086227c4cc421e6_add({"features": [{"bbox": [-101.86, 32.96, -101.77, 33.01], "geometry": {"coordinates": [[[-101.85, 33.0], [-101.79, 33.01], [-101.77, 32.96], [-101.86, 32.96], [-101.85, 33.0]]], "type": "Polygon"}, "id": "2", "properties": {"CAP_ID": "urn:oid:2.49.0.1.840.0.67015f6870353e5398ff0fc27fc502b84951fba2.001.1", "ENDS": "2021-08-01T03:45:00-05:00", "EVENT": "0255", "EXPIRATION": "2021-08-01T03:45:00-05:00", "ISSUANCE": "2021-08-01T03:35:00-05:00", "MSG_TYPE": "SVS", "ONSET": "2021-08-01T03:35:00-05:00", "PHENOM": "SV", "PROD_TYPE": "Severe Thunderstorm Warning", "SIG": "W", "URL": "https://alerts-v2.weather.gov/#/?id=urn:oid:2.49.0.1.840.0.67015f6870353e5398ff0fc27fc502b84951fba2.001.1", "VTEC": "/O.EXP.KLUB.SV.W.0255.000000T0000Z-210801T0845Z/", "WFO": "KLUB"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4116ef72ca8e45c2ab73b5ec029ea9e5 = L.popup({"maxWidth": 2650});
+
+        
+            var html_eeefce1ee9804157a5dc600d325a1e56 = $(`<div id="html_eeefce1ee9804157a5dc600d325a1e56" style="width: 100.0%; height: 100.0%;">             <div>             <h5>NWS Hazards</h5><hr>                 <p>                     Hazard - Severe Thunderstorm Warning                 </p>                 <p>                     WFO - KLUB                 </p>                 <p>                     Issuance - 2021-08-01 03:35                 </p>                 <p>                     Expires - 2021-08-01 03:45                 </p>             </div>                  </div>`)[0];
+            popup_4116ef72ca8e45c2ab73b5ec029ea9e5.setContent(html_eeefce1ee9804157a5dc600d325a1e56);
+        
+
+        geo_json_2df24f460d354e0da086227c4cc421e6.bindPopup(popup_4116ef72ca8e45c2ab73b5ec029ea9e5)
+        ;
+
+        
+    
+    
+        function geo_json_1827e4de2b764b4fb2e45faa3a9daacc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#000000", "fillColor": "#ff0000", "fillOpacity": 0.65, "opacity": 1.0, "weight": 1.0};
+            }
+        }
+
+        function geo_json_1827e4de2b764b4fb2e45faa3a9daacc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1827e4de2b764b4fb2e45faa3a9daacc = L.geoJson(null, {
+                onEachFeature: geo_json_1827e4de2b764b4fb2e45faa3a9daacc_onEachFeature,
+            
+                style: geo_json_1827e4de2b764b4fb2e45faa3a9daacc_styler,
+        });
+
+        function geo_json_1827e4de2b764b4fb2e45faa3a9daacc_add (data) {
+            geo_json_1827e4de2b764b4fb2e45faa3a9daacc
+                .addData(data)
+                .addTo(feature_group_571ce80d46be48dc8dcec508237be766);
+        }
+            geo_json_1827e4de2b764b4fb2e45faa3a9daacc_add({"features": [{"bbox": [-81.02, 35.92, -80.38, 36.06], "geometry": {"coordinates": [[[-80.98, 35.92], [-81.02, 36.05], [-80.98, 36.06], [-80.89, 36.06], [-80.49, 36.04], [-80.4599999, 36.06], [-80.44, 36.03], [-80.42, 36.01], [-80.42, 35.99], [-80.38, 35.96], [-80.98, 35.92]]], "type": "Polygon"}, "id": "22", "properties": {"CAP_ID": "urn:oid:2.49.0.1.840.0.0307a0cf55d2c9206ccfae77460cb6d0e9be928d.001.1", "ENDS": "2021-08-01T05:15:00-04:00", "EVENT": "0080", "EXPIRATION": "2021-08-01T05:15:00-04:00", "ISSUANCE": "2021-08-01T04:31:00-04:00", "MSG_TYPE": "SVR", "ONSET": "2021-08-01T04:31:00-04:00", "PHENOM": "SV", "PROD_TYPE": "Severe Thunderstorm Warning", "SIG": "W", "URL": "https://alerts-v2.weather.gov/#/?id=urn:oid:2.49.0.1.840.0.0307a0cf55d2c9206ccfae77460cb6d0e9be928d.001.1", "VTEC": "/O.NEW.KGSP.SV.W.0080.210801T0831Z-210801T0915Z/", "WFO": "KGSP"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e34703e4b5834f4c80e351091253623c = L.popup({"maxWidth": 2650});
+
+        
+            var html_d4aa91f2030c42fa93955fdb548e573d = $(`<div id="html_d4aa91f2030c42fa93955fdb548e573d" style="width: 100.0%; height: 100.0%;">             <div>             <h5>NWS Hazards</h5><hr>                 <p>                     Hazard - Severe Thunderstorm Warning                 </p>                 <p>                     WFO - KGSP                 </p>                 <p>                     Issuance - 2021-08-01 04:31                 </p>                 <p>                     Expires - 2021-08-01 05:15                 </p>             </div>                  </div>`)[0];
+            popup_e34703e4b5834f4c80e351091253623c.setContent(html_d4aa91f2030c42fa93955fdb548e573d);
+        
+
+        geo_json_1827e4de2b764b4fb2e45faa3a9daacc.bindPopup(popup_e34703e4b5834f4c80e351091253623c)
+        ;
+
+        
+    
+</script>
